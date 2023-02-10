@@ -1,0 +1,22 @@
+.navContainer {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.navContainer .navRight ul {
+  display: flex;
+  align-items: center;
+  color: antiquewhite;
+  justify-content: space-between;
+  width: 400px;
+  list-style: none;
+}
+
+.navLeft {
+  color: red;
+}
+.navLeftActive {
+  color: white;
+}
