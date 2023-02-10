@@ -41,16 +41,7 @@ const Todo = () => {
         setTaskList(newItems)
     }
 
-    // const onEdit = (i, newTask) => {
-    //     setTaskList(
-    //         taskList.map((item, index) => {
-    //             if (index === i) {
-    //                 return { ...item, task: newTask };
-    //             }
-    //             return item;
-    //         })
-    //     );
-    // }
+
 
     const renderTasks = () => {
         if (taskList?.length !== 0) {
