@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import TodoListItem from '../../components/todo/TodoListItem'
+import { LeaderBoardContext } from '../../context/Context'
 
 const Todo = () => {
+
+    const { leaderBoardList, todo } = useContext(LeaderBoardContext)
 
     const [task, setTask] = useState('')
     const [taskList, setTaskList] = useState([])
@@ -14,8 +17,9 @@ const Todo = () => {
 
     const addTask = () => {
         if (task !== '') {
-            taskList.push({ task: task, isDone: false, isCompleted: false })
-            console.log(taskList)
+            // taskList.push({ task: task, isDone: false, isCompleted: false })
+            todo.push({ task: task, isDone: false, isCompleted: false })
+            console.log(todo)
             setTask('')
         } else {
             alert('empty')
@@ -44,8 +48,8 @@ const Todo = () => {
 
 
     const renderTasks = () => {
-        if (taskList?.length !== 0) {
-            return taskList?.map((item, index) => {
+        if (todo?.length !== 0) {
+            return todo?.map((item, index) => {
                 return (
                     <TodoListItem item={item} key={index} onComplete={() => completeTask(index)} onDelete={() => onDelete(index)} />
                 )
