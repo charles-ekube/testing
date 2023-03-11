@@ -1,3 +1,6 @@
+import SpotifyWebApi from 'spotify-web-api-node';
+
+
 export const cardDetails = [
     { id: '1', name: 'Hello' },
     { id: '2', name: 'Hey' },
@@ -6,3 +9,5 @@ export const cardDetails = [
     { id: '5', name: 'Me' },
     { id: '6', name: 'Us' },
 ]
+
+
